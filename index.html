@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annu OP - Publite Legend</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #ff9900; /* PUBG Orangeish */
+            --secondary: #00ffcc; /* Neon Cyan */
+            --dark: #111;
+            --darker: #000;
+            --text: #eee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 153, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0); }
+        }
+
+        /* Header / Hero Section */
+        header {
+            /* FIXED: Changed background-size to 100% 100% */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('OG.jpg');
+            background-size: 100% 100%; /* Forces image to fit width and height exactly */
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border-radius: 50px;
+            animation: pulse 2s infinite;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+            color: var(--darker);
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        /* Card Style for Stories */
+        .card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            border-color: var(--secondary);
+        }
+
+        /* Image Placeholders */
+        .img-box {
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #777;
+            font-style: italic;
+            border: 2px dashed var(--primary);
+            background-size: cover; /* Keeps inner images looking good */
+            background-position: center;
+        }
+        
+        /* Special Message Section */
+        .special-msg {
+            background: linear-gradient(45deg, #222, #111);
+        }
+
+        .hindi-text {
+            font-style: italic;
+            color: #ffcc00;
+            font-size: 1.3rem;
+            margin: 20px 0;
+        }
+
+        /* Good Night Footer */
+        footer {
+            background: #000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+        }
+
+        .moon {
+            font-size: 3rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .img-box { height: 250px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ANNU OP</h1>
+        <p class="tagline">The HACKER of Publite | Hacker Slayer | Drama Queen</p>
+        <button class="btn" onclick="document.getElementById('story').scrollIntoView({behavior: 'smooth'})">Enter Battleground</button>
+    </header>
+
+    <section id="story">
+        <div class="container">
+            <h2>The Legend of the Hacker</h2>
+            <div class="card">
+                <p><strong>Warning:</strong> Pro Player Detected.</p>
+                <div class="img-box" style="background-image: url('kill.jpg');">
+                    </div>
+                <p>Ek din map pe aaya ek Hacker... flying car, aimbot, sab kuch tha uske paas. Puri lobby darr gayi thi.</p>
+                <p>But then entered <strong>ANNU</strong>. She didn't panic. She picked up her G-36, aimed, and <em>BOOM!</em> Headshot!</p>
+                <p class="hindi-text">"Hacker hoga apne ghar ka, Annu ke saamne sab bot hain!"</p>
+                <button class="btn" onclick="alert('Woh hacker abhi bhi lobby mein ro raha hai! 😂')">See Hacker's Reaction</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-msg">
+        <div class="container">
+            <h2>Mood: Masti & Gussa</h2>
+            <div class="card">
+                <div class="img-box" style="background-image: url('rr.jpg');">
+                   </div>
+                
+                <p>Dekh bhai, tu pro player hai maan liya. Tu hacker ko maar sakti hai, woh bhi maan liya.</p>
+                <p>Par ek chhoti si request hai...</p>
+                
+                <div class="hindi-text">
+                    "Kab tak naak par gussa rakhegi bhai? <br>
+                    Thoda smile kar de, varna tera phone lag karega!" 😜
+                </div>
+
+                <p>Zindagi mein masti honi chahiye, gussa toh karela bhi deta hai.</p>
+                
+                <br>
+                <button class="btn" onclick="showOgImage()">OG Image Button</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="moon">🌙</div>
+        <h2>Good Night BRO..</h2>
+        <p>So ja ab, bohot kills kar liye aaj.</p>
+        <p class="hindi-text">"Sapno mein chicken dinner mat khana, subah bhook lagegi."</p>
+        <p style="font-size: 0.8rem; margin-top: 20px; color: #555;">Designed by Tuggu</p>
+    </footer>
+
+    <script>
+        function showOgImage() {
+            const messages = [
+                "Are you sure? This image is too dangerous!",
+                "Loading Desi Swag... 100%",
+                "Error 404: Gussa Not Found. Only Cute Smile Allowed!"
+            ];
+            
+            alert(messages[0]);
+            setTimeout(() => {
+                alert(messages[1]);
+                setTimeout(() => {
+                    alert(messages[2]);
+                }, 1000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
